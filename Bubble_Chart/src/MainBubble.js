@@ -1,8 +1,7 @@
 
-
-// Drop Down 
-function populateDropdown(){
-    var countries =["US","CA","JP","KR"]
+// Drop Down Menue
+function populateDropdown() {
+    var countries =["Canada","Denmark","France","Great Britain","India", "Japan", "Korea", "Mexico","Russia", "U.S.A"]
     var select = d3.select("#selDataset");
     
         countries.forEach((id) =>{
@@ -15,11 +14,6 @@ function populateDropdown(){
 
 populateDropdown();
 
-// Calling US Bubble Chart Function
-
-
-// Call updatePlotly() when a change takes place to the DOM
-// d3.selectAll("#selDataset").on("change", updatePlot);
 
 // Defining updatePLot
 function optionChanged() {
@@ -29,14 +23,16 @@ function optionChanged() {
     var dropdownMenu = d3.select("#selDataset").node().value;
         console.log(dropdownMenu);
 
-        if (dropdownMenu == "US") {
-            console.log("I AM HERE");
-            displayUS();
-
+        if (dropdownMenu == "Canada") {
+            console.log("I AM HERE CA");
+            displayCA();
         }
 
-    // Call build plot function on dropdown menu
+        else if (dropdownMenu == "U.S.A") {
+            console.log("I AM HERE US");
+            displayUS();
+        }
   
-  }
+}
 
   
