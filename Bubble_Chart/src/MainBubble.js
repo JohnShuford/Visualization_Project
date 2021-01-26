@@ -10,6 +10,7 @@ function populateDropdown() {
             .property("value", id)
         });
   
+        displayCA();
       }
 
 populateDropdown();
@@ -18,7 +19,12 @@ populateDropdown();
 // Defining updatePLot
 function optionChanged() {
     // Prevent the page from refreshing
+    // stops the page refresh on "Enter" button
     //d3.event.preventDefault();
+
+    // clears the data of the current page   
+    d3.select("#vis").html("");
+
     // Use D3 to select the dropdown menu
     var dropdownMenu = d3.select("#selDataset").node().value;
         console.log(dropdownMenu);
@@ -32,7 +38,7 @@ function optionChanged() {
             console.log("I AM HERE US");
             displayUS();
         }
-  
+
 }
 
   
