@@ -9,9 +9,9 @@
 
 
 
-// /////////////////////////////////////////////////////////////////////////////////////////////////
-//   Edited BubbleChart() Function variables & changed bubbleChartName for dropdown menue purposes
-//  ///////////////////////////////////////////////////////////////////////////////////////////////
+//  =================================================================================================================
+//        Edited BubbleChart() Function variables & changed bubbleChartName for dropdown menue purposes
+//  =================================================================================================================
 function bubbleChartUS() {
   // Constants for sizing
   var width = 980;
@@ -72,9 +72,9 @@ function bubbleChartUS() {
 
   };
   
-  //  ///////////////////////////////////////////////////////////////
-  //    Edited yearsTitle X variables (key, values) for placement
-  //  //////////////////////////////////////////////////////////////
+  //  =================================================================================================================
+  //        Edited yearsTitle X variables (key, values) for placement
+  //  =================================================================================================================
   // X locations of the year titles.
   var yearsTitleX = {
     News_Politics: 120,
@@ -125,9 +125,9 @@ function bubbleChartUS() {
   simulation.stop();
 
 
-//  //////////////////////////////////////////////////////////
-//   Edited .domain and .range values
-//  //////////////////////////////////////////////////////////
+  //  =================================================================================================================
+  //      Edited .domain and .range values
+  //  =================================================================================================================
   // Nice looking colors - no reason to buck the trend
   // @v4 scales now have a flattened naming scheme
   var fillColor = d3.scaleOrdinal()
@@ -164,9 +164,9 @@ function bubbleChartUS() {
     // Use map() to convert raw data into node data.
     // Checkout http://learnjsdata.com/ for more on
     // working with data.
-//  //////////////////////////////////////////////////////////
-//   Edited myNodes return values 
-//  //////////////////////////////////////////////////////////
+    //  =================================================================================================================
+    //        Edited myNodes return values 
+    //  =================================================================================================================
     var myNodes = rawData.map(function (d) {
       return {
         id: d.no_of_vids,
@@ -335,9 +335,9 @@ function bubbleChartUS() {
    * details of a bubble in the tooltip.
    */
 
-//  //////////////////////////////////////////////////////////
-//   Edited  var content values ( for mouseover info display)
-//  //////////////////////////////////////////////////////////
+  //  =================================================================================================================
+  //          Edited  var content values ( for mouseover info display)
+  //  =================================================================================================================
   function showDetail(d) {
     // change outline to indicate hover state.
     d3.select(this).attr('stroke', 'black');
@@ -395,10 +395,10 @@ function bubbleChartUS() {
  * to create a new bubble chart instance, load the data, and display it.
  */
 
-//  //////////////////////////////////////////////////////////////////////
-//     Below var was removed from this section for dropdown menu purpose
-//     This line has moved inside the display function at the bottom
-//  ///////////////////////////////////////////////////////////////////////
+//  =================================================================================================================
+//          Below var was removed from this section for dropdown menu purpose
+//          This line has moved inside the display function at the bottom
+//  =================================================================================================================
 //var myBubbleChart = bubbleChart();
 
 
@@ -407,9 +407,9 @@ function bubbleChartUS() {
  * Function called once data is loaded from CSV.
  * Calls bubble chart function to display inside #vis div.
  */
-// /////////////////////////////////////////////////////////////////////////////////////////////////
-//    Below display function has been commented out for drop down menu purpose
-//  ////////////////////////////////////////////////////////////////////////////////////////////////
+//  =================================================================================================================
+//       Below display function has been commented out for drop down menu purpose
+//  =================================================================================================================
 // function display(error, data) {
 //   if (error) {
 //     console.log(error);
@@ -461,35 +461,35 @@ function addCommas(nStr) {
   return x1 + x2;
 }
 
-//  //////////////////////////////////////////////////////////////////
-//  Loading CSV file was moved into a function for Dropdown purposes
-    //////////////////////////////////////////////////////////////////
+//  =================================================================================================================
+//          Loading CSV file was moved into a function for Dropdown purposes
+//  =================================================================================================================
 //  Load the data.
-//  d3.csv('data/de_cat_data.csv', display);
+//  d3.csv('data/us_cat_data.csv', display);
 
 
-//  ////////////////////////////////////////////////////////////////////////
-//    Loading CSV file was moved into a function for menu Dropdown purposes
-    ///////////////////////////////////////////////////////////////////////
+//  =================================================================================================================
+//           Loading CSV file was moved into a function for menu Dropdown purposes
+//  =================================================================================================================
 //  Load the data.
-//  d3.csv('data/de_cat_data.csv', display);
+//  d3.csv('data/us_cat_data.csv', display);
 
-//  ///////////////////////////////////////////////////////////////////////////////
-//    Calling setupButtons was moved into a new function for menu Dropdown purposes 
-//  ///////////////////////////////////////////////////////////////////////////////
+//  =================================================================================================================
+//            Calling setupButtons was moved into a new function for menu Dropdown purposes 
+//  =================================================================================================================
 // setup the buttons.
 //  setupButtons();
 
 
-//  //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//    Below display() function has been created, to be called later in mainbubble.js file for drop down menu.
-//    Each country wil have their own display function. displayCOUNTRYNAME()
-//    *******************************************************************************************************
-//    Remember to change: display country's initial, bubbleChart country's initial and your CSV file path name
-//    ********************************************************************************************************
-//  /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  ===================================================================================================================
+//      Below display() function has been created, to be called later in mainbubble.js file for drop down menu.
+//      Each country wil have their own display function. displayCOUNTRYNAME()
+//    ***************************************************************************************************************
+//        Remember to change: display country's initial, bubbleChart country's initial and your CSV file path name
+//    ***************************************************************************************************************
+//  ===================================================================================================================
 
-function displayUS(){
+function displayUS() {
 
     var myBubbleChart = bubbleChartUS();
     
