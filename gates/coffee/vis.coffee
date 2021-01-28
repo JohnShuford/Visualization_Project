@@ -1,7 +1,7 @@
 class BubbleChart
   constructor: (data) ->
     @data = data
-    @width = 940
+    @width = 1000
     @height = 600
 
     @tooltip = CustomTooltip("gates_tooltip", 240)
@@ -174,9 +174,9 @@ class BubbleChart
 
   show_details: (data, i, element) =>
     d3.select(element).attr("stroke", "black")
-    content = "<span class=\"name\">Title:</span><span class=\"value\"> #{data.name}</span><br/>"
-    content +="<span class=\"name\">Amount:</span><span class=\"value\"> $#{addCommas(data.value)}</span><br/>"
-    content +="<span class=\"name\">Year:</span><span class=\"value\"> #{data.year}</span>"
+    content = "<span class=\"name\">Channel Title:</span><span class=\"value\"> #{data.name}</span><br/>"
+    content +="<span class=\"name\">Views:</span><span class=\"value\"> $#{addCommas(data.value)}</span><br/>"
+    content +="<span class=\"name\">Category ID:</span><span class=\"value\"> #{data.year}</span>"
     @tooltip.showTooltip(content,d3.event)
 
 
