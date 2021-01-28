@@ -8,7 +8,7 @@ var chartMargin = {
   top: 30,
   right: 30,
   bottom: 50,
-  left: 115
+  left: 80
 };
 
 // Define dimensions of the chart area
@@ -67,11 +67,8 @@ function updateToolTip(chosenYAxis, barGroup) {
     if (chosenYAxis === "avg_likes") {
       label = "Average Likes";
     }
-    else if (chosenYAxis === "avg_dislikes") {
-      label = "Average Dislikes";
-    }
     else {
-        label = "Average Views";
+      label = "Average Dislikes";
     }
     
     var numberFormat = d3.format(",");
@@ -106,7 +103,6 @@ d3.csv("metric_data.csv").then(function(metricData){
     metricData.forEach(function(d) {
     d.avg_likes = +d.avg_likes;
     d.avg_dislikes = +d.avg_dislikes;
-    d.avg_views = +d.avg_views;
     });
 
    // Configure a band scale for the horizontal axis with a padding of 0.1 (10%)
@@ -168,14 +164,6 @@ d3.csv("metric_data.csv").then(function(metricData){
         .attr("value", "avg_dislikes")
         .classed("inactive", true)
         .text('# of Dislikes')
-
-    var viewsLabel = labelsGroup.append('text')
-        .attr('y', 0- chartMargin.left + 40)
-        .attr('x', 0- (chartHeight / 2))
-        .attr("dy", "1em")
-        .attr("value", "avg_views")
-        .classed("inactive", true)
-        .text('# of Views')
     //X Axis
     chartGroup.append('text')
         .attr("transform", `translate(${chartWidth / 2}, ${chartHeight + 20})`)
@@ -214,31 +202,14 @@ d3.csv("metric_data.csv").then(function(metricData){
             dislikesLabel
                 .classed("active", false)
                 .classed("inactive", true);
-            viewsLabel
-                .classed("active", false)
-                .classed("inactive", true);
-            }
-        else if (chosenYAxis === "avg_dislikes") {
-            likesLabel
-                .classed("active", false)
-                .classed("inactive", true);
-            dislikesLabel
-                .classed("active", true)
-                .classed("inactive", false);
-            viewsLabel
-                .classed("active",false)
-                .classed("inactive", true);
             }
         else {
             likesLabel
                 .classed("active", false)
-                .classed("inactive", true);
+                .classed("inactive", true)
             dislikesLabel
-                .classed("active", false)
-                .classed("inactive", true);
-            viewsLabel
                 .classed("active", true)
-                .classed("inactive", false);
+                .classed("inactive", false)
             }
         }
     });
