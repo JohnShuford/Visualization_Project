@@ -9,7 +9,7 @@ var map = d3.choropleth()
     .colors(['#ff8080','#79BEA8','#ffff80','#ffcc99'])
     .column('1800')
     .domain([0, 3])
-    .legend(true)
+    .legend(false)
     .unitId('iso3');
 
 d3.csv('custom_domain.csv').then(data => {
