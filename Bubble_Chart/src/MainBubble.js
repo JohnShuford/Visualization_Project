@@ -5,7 +5,7 @@
 // Drop Down Menu **Function**
 function populateDropdown() {
 
-    var countries =["Canada","Denmark","France","Great Britain","India", "Japan", "Korea", "Mexico","Russia", "U.S.A"];
+    var countries =["Canada","France","Germany","Great Britain","India", "Japan", "Korea", "Mexico","Russia", "U.S.A"];
     
     var select = d3.select("#selDataset");
     
@@ -35,8 +35,8 @@ function optionChanged() {
             displayCA();
         }
 
-        else if (dropdownMenu == "Denmark") {
-            displayUS();
+        else if (dropdownMenu == "Germany") {
+            displayDE();
         }
 
         else if (dropdownMenu == "France") {
