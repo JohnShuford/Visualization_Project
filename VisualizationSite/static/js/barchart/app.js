@@ -1,4 +1,3 @@
-//=========
 // Define SVG area dimensions
 var svgWidth = 960;
 var svgHeight = 660;
@@ -25,10 +24,12 @@ var svg = d3.select("body")
 var chartGroup = svg.append("g")
   .attr("transform", `translate(${chartMargin.left}, ${chartMargin.top})`);
 //================================================================
-//INTERACTIVE AXIS Functions
+//INTERACTIVE AXIS FUNCTIONS
 //==================================================================
+// Set initial Y Axis Parameters
 var chosenYAxis = "avg_likes"
-//function for updating y-scale var upon click on axis label
+
+// Function for updating y-scale var upon click on axis label
 function yScale(metricData, chosenYAxis) {
     // create scales
     var yLinearScale = d3.scaleLinear()
@@ -37,7 +38,7 @@ function yScale(metricData, chosenYAxis) {
     
     return yLinearScale;
   }
-// function for updating yAxis var upon click on axis label
+// Function for updating yAxis var upon click on axis label
 function renderAxesY(newYScale, yAxis) {
     var leftAxis = d3.axisLeft(newYScale);
   
@@ -48,7 +49,7 @@ function renderAxesY(newYScale, yAxis) {
     return yAxis;
   }
 
-// function used for updating circles group with a transition to new circles
+// Function used for updating bars group with a transition to new bars
 function renderBars(barGroup, newYScale, chosenYAxis) {
 
     barGroup.transition()
@@ -59,7 +60,7 @@ function renderBars(barGroup, newYScale, chosenYAxis) {
     return barGroup;
   }
 
-// function used for updating circles group with new tooltip
+// Function used for updating bars group with new tooltip
 function updateToolTip(chosenYAxis, barGroup) {
 
     var label;
@@ -85,12 +86,12 @@ function updateToolTip(chosenYAxis, barGroup) {
     
     barGroup.call(toolTip);
 
-    // Step 2: Create "mouseover" event listener to display tooltip
+    // Create "mouseover" event listener to display tooltip
     barGroup.on("mouseover", function(data) {
       toolTip.show(data);
     })
 
-    // Step 3: Create "mouseout" event listener to hide tooltip
+    // Create "mouseout" event listener to hide tooltip
     .on("mouseout", function(data, index) {
       toolTip.hide(data);
     });
@@ -98,11 +99,11 @@ function updateToolTip(chosenYAxis, barGroup) {
     return barGroup;
   }
 
-//Import Data
+// Import Data
 d3.csv("metric_data.csv").then(function(metricData){
     console.log(metricData);
 
-     // Cast the hours value to a number for each piece of tvData
+     // Cast the likes/views value to a number for each piece of metricData
     metricData.forEach(function(d) {
     d.avg_likes = +d.avg_likes;
     d.avg_dislikes = +d.avg_dislikes;
