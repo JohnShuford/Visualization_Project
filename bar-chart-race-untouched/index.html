@@ -302,7 +302,7 @@ d3.csv('brand_values.csv').then(function(data) {
 
       yearText.html(~~year);
 
-      if(year == 2001) ticker.stop();
+      if(year == 2008) ticker.stop();
       year = d3.format('.1f')((+year) + 0.1);
    },tickDuration);
 
