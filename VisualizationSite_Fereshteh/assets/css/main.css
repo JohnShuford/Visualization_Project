@@ -268,8 +268,8 @@ button,
   cursor: pointer;
   display: inline-block;
   font-weight: 600;
-  height: 3.25rem;
-  line-height: 3.25rem;
+  height: 2.25rem;
+  line-height: 1.85rem;
   padding: 0 1.75rem;
   text-align: center;
   text-decoration: none;
@@ -1788,7 +1788,8 @@ ul.icons {
 .wrapper {
   padding: 8rem 0 6rem 0 ;
   position: relative;
-  z-index: 1; }
+  z-index: 1; 
+  margin-top: -10rem;}
   @media screen and (max-width: 1280px) {
     .wrapper {
       padding: 4rem 0 2rem 0 ; } }
@@ -2853,3 +2854,14 @@ footer {
   width: 100%;
   padding-top: 3px;
   }
+
+.bar{
+    margin-top: -20rem;
+  }
+
+#container{
+    margin-top: -12rem;
+  }
+.container{
+  margin-top: -3rem;
+}
