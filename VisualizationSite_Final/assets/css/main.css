@@ -2855,8 +2855,8 @@ footer {
   padding-top: 3px;
   }
 
-.bar{
-    margin-top: -20rem;
+  .bar{
+    margin-top: -10rem;
   }
 
 #container{
@@ -2864,4 +2864,8 @@ footer {
   }
 .container{
   margin-top: -3rem;
+}
+#barid {
+  margin-top: -1rem;
+  margin-bottom: -5rem;
 }

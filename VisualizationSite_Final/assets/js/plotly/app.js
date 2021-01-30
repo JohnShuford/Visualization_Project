@@ -2,7 +2,7 @@
 
 // Drop Down Menu **Function**
 function populateDropdown() {
-    var countries =["Canada","France","Germany","Great Britain","India", "Japan", "Korea", "Mexico","Russia", "U.S.A"];
+    var countries =["Canada","France","Germany","Great Britain","India", "Japan", "South Korea", "Mexico","Russia", "U.S.A"];
     var select = d3.select("#selDataset");
         countries.forEach((id) =>{
             select.append("option")
