@@ -99,13 +99,8 @@ function updateToolTip(chosenYAxis, barGroup) {
     return barGroup;
   }
 
-<<<<<<< HEAD:VisualizationSite/static/js/bar_chart/app.js
 //Import Data
 d3.csv("../data/bar_chart_data/metric_data.csv").then(function(metricData){
-=======
-// Import Data
-d3.csv("metric_data.csv").then(function(metricData){
->>>>>>> 6296277b5efb6ea04fdef89c0583174afbe6dbb9:VisualizationSite/static/js/barchart/app.js
     console.log(metricData);
 
      // Cast the likes/views value to a number for each piece of metricData
