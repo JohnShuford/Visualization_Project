@@ -8,7 +8,7 @@ var map = d3.choropleth()
     //.colors(['#FBDFE6','#EC6988','#D61A46', '#7B0F28', '#340913'])
     .colors(['#ff8080','#79BEA8','#ffff80','#ffcc99'])
     .column('1800')
-    .domain([0, 3])
+    .domain([0, 9])
     .legend(false)
     .unitId('iso3');
 
