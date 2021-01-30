@@ -74,7 +74,7 @@ function updateToolTip(chosenYAxis, barGroup) {
         label = "Average Views";
     }
     
-    var numberFormat = d3.format(",");
+    var numberFormat = d3.format(",.2f");
 
     var toolTip = d3.tip()
         .attr("class", "tooltip")
