@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+
+<html>
+
+	  <head>
+  
+        <title>Category Bubble Chart</title>
+
+        <meta charset="utf-8">
+        <meta name="description" content="Using D3v4 to create a Bubble chart. Based on NYT visualization">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="description" content="" />
+		    <meta name="keywords" content="" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+  
+		
+      <link rel="stylesheet" href="assets/css/bubble_chart/bubble_chart.css">
+      <link rel="stylesheet" href="assets/css/bubble_chart/reset.css">
+	
+	  <!--
+	  <link rel="stylesheet" href="assets/css/bubble_chart/style.css">
+	  <link rel="stylesheet" href="assets/css/bubble_chart/d3Style.css"> 
+	   -->
+	  
+    </head>
+
+  <body class="is-preload">
+
+    <!-- Header -->
+          <header id="header">
+            <a class="logo" href="index.html">Main Page</a>
+            <nav>
+              <a href="#menu">Menu</a>
+            </nav>
+          </header>
+      
+    <!-- Nav -->
+    <nav id="menu">
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bubble_chart.html">Bubble Chart(Category)</a></li>
+        <li><a href="bar_graph.html">Bar Chart(Averages)</a></li>
+        <li><a href="youtubeindex.html">3D Box</a></li>
+        <li><a href="geo_map.html">Map</a></li>
+
+      </ul>
+    </nav> 
+      
+
+
+  <div class="container">
+    <br>
+    <h1>Most Viewed YouTube Categories</h1>
+    
+    <div id="toolbar">
+      <a href="#" id="all" class="button active">All Categories</a>
+      <a href="#" id="year" class="button">Most Viewed Categories</a>
+    </div>
+
+    <div class="col-md-4">
+      <br><br><div class="well">
+       <h3>Select Country:</h3></div>
+        <select id="selDataset" onchange="optionChanged(this.value)"></select>
+      </div>
+
+    <div id="vis"></div>
+
+    <footer>
+			<div class="footer">
+				Team Abracadata &copy; 2021 | DU Data Analysis and Visualization 
+			</div>
+    </footer>
+    
+  </div>
+
+  <!-- Bubble Chart JS Scripts -->
+      <script src="//d3js.org/d3.v4.min.js"></script>
+      <script src="assets/js/bubble_chart/tooltip.js"></script>
+      <script src="assets/js/bubble_chart/bubble_chart_ca.js"></script>
+      <script src="assets/js/bubble_chart/bubble_chart_de.js"></script>
+      <script src="assets/js/bubble_chart/bubble_chart_fr.js"></script>
+      <script src="assets/js/bubble_chart/bubble_chart_gb.js"></script>
+      <script src="assets/js/bubble_chart/bubble_chart_in.js"></script>
+      <script src="assets/js/bubble_chart/bubble_chart_jp.js"></script>
+      <script src="assets/js/bubble_chart/bubble_chart_kr.js"></script>
+      <script src="assets/js/bubble_chart/bubble_chart_mx.js"></script>
+      <script src="assets/js/bubble_chart/bubble_chart_ru.js"></script>
+      <script src="assets/js/bubble_chart/bubble_chart_us.js"></script>
+      <script src="assets/js/bubble_chart/MainBubble.js"></script>
+
+  <!-- Scripts -->
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <script src="assets/js/main.js"></script>
+
+  </body>
+  
+</html>
+
+
+  <!-- PLEASE REMOVE AFTER CLONING -->
+  <!--script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-17355070-1', 'auto');
+  ga('send', 'pageview');
+
+  </script-->
+  <!-- END REMOVE -->

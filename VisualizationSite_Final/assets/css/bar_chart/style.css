@@ -1,0 +1,67 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.bar {
+  fill: rgb(180, 54, 60);
+}
+
+.bar:hover {
+  fill: rgb(82, 147, 177);
+  opacity: 0.7;
+}
+
+.grid {
+  color: lightgray;
+  stroke-opacity: 0.7;
+  shape-rendering: crispEdges;
+}
+
+/* .axisText {
+    font-family: 'Helvetica Neue';
+    font-size: 15px;
+} */
+
+/* .axis-text {
+  font-family: sans-serif;
+  font-weight: bold;
+  fill: black;
+  text-anchor: middle;
+}
+
+.active {
+  font-weight: bold;
+  fill: #000;
+  fill: black;
+  transition: fill 0.3s ease-out;
+  text-anchor: middle;
+}
+
+.inactive {
+  font-weight: lighter;
+  fill: #551aaf;
+  transition: fill 0.3s ease-out;
+  text-anchor: middle;
+}
+
+.grid {
+    color: lightgray;
+    stroke-opacity: 0.7;
+    shape-rendering: crispEdges;
+}
+
+.tooltip {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    padding: 10px;
+    font: 12px sans-serif;
+    text-align: center;
+    color: white;
+    background: rgb(0, 140, 255);
+    border: 0;
+    border-radius: 10px;
+    display: none;
+  } */
