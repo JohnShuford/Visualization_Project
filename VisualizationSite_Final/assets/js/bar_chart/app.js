@@ -8,7 +8,7 @@ var chartMargin = {
   top: 30,
   right: 30,
   bottom: 100,
-  left: 350
+  left: 450  //Changed this
 };
 
 // Define dimensions of the chart area
@@ -18,6 +18,7 @@ var chartHeight = svgHeight - chartMargin.top - chartMargin.bottom;
 // Select body, append SVG area to it, and set the dimensions
 var svg = d3.select("body")
   .append("svg")
+  .attr("class", "chart") // Added this 
   .attr("height", svgHeight)
   .attr("width", svgWidth);
 
@@ -138,7 +139,7 @@ d3.csv("data/bar_chart_data/metric_data.csv").then(function(metricData){
         .scale(yLinearScale)
         .tickSize(-chartWidth, 0, 0)
         .tickFormat(''))
-    // Create one SVG rectangle per piece of tvData
+    // Create one SVG rectangle per piece of data
   // Use the linear and band scales to position each rectangle within the chart
     var barGroup = chartGroup.selectAll(".bar")
         .data(metricData)
@@ -156,7 +157,7 @@ d3.csv("data/bar_chart_data/metric_data.csv").then(function(metricData){
     var likesLabel = labelsGroup.append('text')
         .attr('y',0- chartMargin.left)
         .attr('x', 0- (chartHeight / 2))
-        .attr("dy", "20em")
+        .attr("dy", "23em") // Changed each of these labels
         .attr("value", "avg_likes")
         .classed("active", true)
         .text('# of Likes')
@@ -164,7 +165,7 @@ d3.csv("data/bar_chart_data/metric_data.csv").then(function(metricData){
     var dislikesLabel = labelsGroup.append('text')
         .attr('y', 0- chartMargin.left + 20)
         .attr('x', 0- (chartHeight / 2))
-        .attr("dy", "17em")
+        .attr("dy", "20em") // Changed each of these labels
         .attr("value", "avg_dislikes")
         .classed("inactive", true)
         .text('# of Dislikes')
@@ -172,7 +173,7 @@ d3.csv("data/bar_chart_data/metric_data.csv").then(function(metricData){
     var viewsLabel = labelsGroup.append('text')
         .attr('y',0- chartMargin.left + 40)
         .attr('x', 0- (chartHeight / 2))
-        .attr("dy", "14em")
+        .attr("dy", "17em") // Changed each of these labels
         .attr("value", "avg_views")
         .classed("inactive", true)
         .text('# of Views')
