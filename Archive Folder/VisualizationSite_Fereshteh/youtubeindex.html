@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+
+<html>
+
+	  <head>
+
+			<title>3D Box</title>
+			
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+			<meta name="description" content="" />
+			<meta name="keywords" content="" />
+
+			<link type="text/css" rel="stylesheet" href="assets/css/youtube_visualization/main.css"/>
+
+			<link rel="stylesheet" href="assets/css/main.css" />
+
+			<style>
+
+				#blocker {
+					position: relative;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					right: 0;
+				}
+			</style>
+		
+		</head>
+
+
+<body class="is-preload">
+
+    <!-- Header -->
+          <header id="header">
+            <a class="logo" href="main.html">Main Page</a>
+            <nav>
+              <a href="#menu">Menu</a>
+            </nav>
+          </header>
+      
+    <!-- Nav -->
+	<nav id="menu">
+		<ul class="links">
+		  <li><a href="main.html">Home</a></li>
+		  <li><a href="bubble_chart.html">Bubble Chart(Category)</a></li>
+		  <li><a href="bar_graph.html">Bar Chart(Averages)</a></li>
+		  <li><a href="youtubeindex.html">3D Box</a></li>
+		  <li><a href="map.html">Map</a></li>
+		</ul>
+	  </nav> 
+		  
+		<!-- Highlights -->
+		<section class="wrapper">
+			<div class="inner"> </section>
+				<header class="special">
+  <div class="container">
+	<h1>Popular YouTube Videos</h1>
+  </div>
+			
+			
+  <div id="container"></div>
+  <div id="blocker"></div>
+
+		<script type="module">
+
+			import * as THREE from './assets/js/youtube_visualization/build/three.module.js';
+
+			import { TrackballControls } from './assets/js/youtube_visualization/controls/TrackballControls.js';
+			import { CSS3DRenderer, CSS3DObject } from './assets/js/youtube_visualization/renderers/CSS3DRenderer.js';
+
+			let camera, scene, renderer;
+			let controls;
+
+			function Element( id, x, y, z, ry ) {
+
+				const div = document.createElement( 'div' );
+				div.style.width = '480px';
+				div.style.height = '360px';
+				div.style.backgroundColor = '#000';
+
+				const iframe = document.createElement( 'iframe' );
+				iframe.style.width = '480px';
+				iframe.style.height = '360px';
+				iframe.style.border = '0px';
+				iframe.src = [ 'https://www.youtube.com/embed/', id, '?rel=0' ].join( '' );
+				div.appendChild( iframe );
+
+				const object = new CSS3DObject( div );
+				object.position.set( x, y, z );
+				object.rotation.y = ry;
+
+				return object;
+
+			};
+
+			init();
+			animate();
+
+			function init() {
+
+				const container = document.getElementById( 'container' );
+
+				camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 5000 );
+				camera.position.set( 500, 350, 750 );
+
+				scene = new THREE.Scene();
+
+				renderer = new CSS3DRenderer();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				container.appendChild( renderer.domElement );
+
+				const group = new THREE.Group();
+				group.add( new Element( 'VYOjWnS4cMY', 0, 0, 300, 0 ) );
+				group.add( new Element( 'LFhT6H6pRWg', 300, 0, 0, Math.PI / 2 ) );
+				group.add( new Element( 'FlsCjmMhFmw', 0, 0, - 300, Math.PI ) );
+				group.add( new Element( '2Vv-BfVoq4g', - 300, 0, 0, - Math.PI / 2 ) );
+				scene.add( group );
+
+				controls = new TrackballControls( camera, renderer.domElement );
+				controls.rotateSpeed = 4;
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+				// Block iframe events when dragging camera
+
+				const blocker = document.getElementById( 'blocker' );
+				blocker.style.display = 'none';
+
+				controls.addEventListener( 'start', function () {
+
+					blocker.style.display = '';
+
+				} );
+				controls.addEventListener( 'end', function () {
+
+					blocker.style.display = 'none';
+
+				} );
+
+			}
+
+			function onWindowResize() {
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+				controls.update();
+				renderer.render( scene, camera );
+
+			}
+
+		</script>
+
+
+    <footer>
+			<div class="footer">
+				Team Abracadata &copy; 2021 | DU Data Analysis and Visualization 
+			</div>
+    </footer>
+    
+  </div>
+		  <!-- Scripts -->
+		  <script src="assets/js/jquery.min.js"></script>
+		  <script src="assets/js/browser.min.js"></script>
+		  <script src="assets/js/breakpoints.min.js"></script>
+		  <script src="assets/js/util.js"></script>
+		  <script src="assets/js/main.js"></script>
+
+		
+	</body>
+</html>
