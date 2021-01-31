@@ -7,14 +7,14 @@ Visualization Project: Global Analysis of Trending YouTube Data
 - Julia Squeri
 - John Shuford
 
-The final version of this project is deplyoed [here](link)
+The final version of this project is deployed [here](link)
 
 Project Overview
 ------
 ### Dataset
 
 The data used for this project 
-can be found [here] (https://www.kaggle.com/datasnaek/youtube-new) . The final dataset included the data for 10 counties (N= 45,698). Individual CSVs were downloaded, cleaned, and merged together for analysis. 
+can be found [here](https://www.kaggle.com/datasnaek/youtube-new) . The final dataset included the data for 10 counties (N= 45,698). Individual CSVs were downloaded, cleaned, and merged together for analysis. 
 
 Countries Analyzed
 - US
