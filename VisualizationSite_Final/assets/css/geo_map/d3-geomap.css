@@ -19,3 +19,8 @@
 .d3-geomap .legend-bar {
   stroke: #333;
   stroke-width: 1px; }
+
+.d3-geomap {
+  margin-top: 2 rem;
+  margin-bottom: 3rem;
+}
