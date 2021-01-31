@@ -65,10 +65,10 @@ var countries = [
    }
 ];
 
-// Define arrays to hold created city and state markers
+// Define arrays to hold created countries
 var countryMarkers = [];
 
-// Loop through locations and create city and state markers
+// Loop through locations and create country markers
 for (var i = 0; i < countries.length; i++) {
   // Setting the marker radius for the state by passing population into the markerSize function
   countryMarkers.push(
@@ -83,7 +83,7 @@ for (var i = 0; i < countries.length; i++) {
 
 }
 
-// Function that will determine the color of a neighborhood based on the borough it belongs to
+// Function that will determine the color of a country based on the views it belongs to
 function chooseColor(name) {
   switch (name) {
 
@@ -138,7 +138,7 @@ function chooseColor(name) {
       accessToken: API_KEY
   });
 
-  // Create two separate layer groups: one for cities and one for states
+  // Create two separate layer groups
   var countries = L.layerGroup(countryMarkers);
 
 // Create a baseMaps object
@@ -166,15 +166,3 @@ var myMap = L.map("map", {
 L.control.layers(baseMaps, overlayMaps, {
   collapsed: false
 }).addTo(myMap);
-
-
-// countries.forEach(function(d){
-//   var marker = L.marker(d.coordinates,{
-//     title: d.name,
-//     draggable: true,
-//   }).addTo(myMap);
-
-// // Binding a pop-up to our marker
-// marker.bindPopup(`<b>${d.name}</b><hr> Total Watched YouTube: ${d.total}`);
-// })
-
