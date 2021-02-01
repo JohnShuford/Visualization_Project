@@ -1,6 +1,6 @@
 Visualization Project: Global Analysis of Trending YouTube Data
 -----
-![de1c91788be0d791135736995109272a](https://user-images.githubusercontent.com/69160361/106509343-c0551d00-648a-11eb-88a7-bc435f15178c.png) 
+![small_YouTube-logo-play-icon](https://user-images.githubusercontent.com/69160361/106512655-20e65900-648f-11eb-8900-1df5ec5f7fdb.png)
 
 ### Team Members
 - Fereshteh Aghaei 
