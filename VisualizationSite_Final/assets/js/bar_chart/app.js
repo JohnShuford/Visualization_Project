@@ -1,14 +1,34 @@
+function makeResponsive() {
+
+  // If the SVG area isn't empty when the browser loads, remove & replace it with a resized version of the chart
+  var svgArea = d3.select("body").select("svg");
+
+      // Clear SVG if Not Empty
+      if (!svgArea.empty()) {
+        svgArea.remove();
+      }
+
+  // Setup Chart Params
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+
+
+    
+  // Setup Chart/SVG Params
+  var svgHeight = height;
+  var svgWidth = width;
+
 //=========
 // Define SVG area dimensions
-var svgWidth = 1200;
-var svgHeight = 900;
+//var svgWidth = 1200;
+//var svgHeight = 900;
 
 // Define the chart's margins as an object
 var chartMargin = {
-  top: 30,
+  top: 130,
   right: 30,
   bottom: 100,
-  left: 450  //Changed this
+  left: 150  //Changed this
 };
 
 // Define dimensions of the chart area
@@ -157,7 +177,7 @@ d3.csv("data/bar_chart_data/metric_data.csv").then(function(metricData){
     var likesLabel = labelsGroup.append('text')
         .attr('y',0- chartMargin.left)
         .attr('x', 0- (chartHeight / 2))
-        .attr("dy", "23em") // Changed each of these labels
+        .attr("dy", "6em") // Changed each of these labels
         .attr("value", "avg_likes")
         .classed("active", true)
         .text('# of Likes')
@@ -165,7 +185,7 @@ d3.csv("data/bar_chart_data/metric_data.csv").then(function(metricData){
     var dislikesLabel = labelsGroup.append('text')
         .attr('y', 0- chartMargin.left + 20)
         .attr('x', 0- (chartHeight / 2))
-        .attr("dy", "20em") // Changed each of these labels
+        .attr("dy", "3em") // Changed each of these labels
         .attr("value", "avg_dislikes")
         .classed("inactive", true)
         .text('# of Dislikes')
@@ -173,7 +193,7 @@ d3.csv("data/bar_chart_data/metric_data.csv").then(function(metricData){
     var viewsLabel = labelsGroup.append('text')
         .attr('y',0- chartMargin.left + 40)
         .attr('x', 0- (chartHeight / 2))
-        .attr("dy", "17em") // Changed each of these labels
+        .attr("dy", "0em") // Changed each of these labels
         .attr("value", "avg_views")
         .classed("inactive", true)
         .text('# of Views')
@@ -184,6 +204,16 @@ d3.csv("data/bar_chart_data/metric_data.csv").then(function(metricData){
         .attr("y", 20)
         .attr("class","axis-text")
         .text("Country")
+
+    // Title for Chart
+    chartGroup.append('text')
+        .attr("x", (chartWidth / 2))             
+        .attr("y", 0 - (chartMargin.top / 2))
+        .attr("text-anchor", "middle")  
+        .style("font-size", "32px") 
+        .style("font-family", "sans-serif")
+        //.style("text-decoration", "underline")  
+        .text("COUNTRY'S AVERAGE (LIKES | DISLIKES | VIEWS)");
 
     //update tool tip function
     var barGroup = updateToolTip(chosenYAxis, barGroup)
@@ -245,3 +275,10 @@ d3.csv("data/bar_chart_data/metric_data.csv").then(function(metricData){
     });
 
 });
+
+}
+
+makeResponsive();
+      
+// Event listener to resizeing the chart when window is resized
+d3.select(window).on("resize", makeResponsive);
