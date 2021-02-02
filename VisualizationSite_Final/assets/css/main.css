@@ -796,6 +796,7 @@ table.alt tbody tr td {
 
 .highlights .content {
   background: #ffffff;
+  border: 6px solid #000000;
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.025); }
 
 /* Testimonials 
