@@ -44,4 +44,5 @@ For three of our visualizations, we adapted publically available code libraries 
 - The code used for creating our bubble chart can be found [here](https://vallandingham.me/vis/gates/).
 - The code used for our map can be found [here](https://d3-geomap.github.io/).
 - The code used for our 3D Box can be found [here](link).
+- The final project can be found [here](https://johnshuford.github.io/Visualization_Project/index.html).
 
