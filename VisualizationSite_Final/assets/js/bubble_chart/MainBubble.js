@@ -55,7 +55,7 @@ function optionChanged() {
             displayJP();
         }
 
-        else if (dropdownMenu == "Korea") {
+        else if (dropdownMenu == "South Korea") {
             displayKR();
         }
 
