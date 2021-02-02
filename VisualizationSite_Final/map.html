@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+
+<html>
+
+	  <head>
+
+    
+    <title>Watched YouTube Map</title>
+
+    <meta charset="utf-8">
+        <meta name="description" content="Using D3v4 to create a Bubble chart. Based on NYT visualization">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="description" content="" />
+		    <meta name="keywords" content="" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+
+ 
+
+    <!-- d3 JavaScript -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/leaflet_map/style.css">
+
+  </head>
+
+  <body class="is-preload">
+
+
+    <!-- Header -->
+    <header id="header">
+      <a class="logo" href="index.html">AbracaDashboard</a>
+      <nav>
+        <a href="#menu">Menu</a>
+      </nav>
+    </header>
+
+  <!-- Nav -->
+<nav id="menu">
+  <ul class="links">
+    <li><a href="index.html">Dashboard</a></li>
+    <li><a href="bubble_chart.html">Most Viewed Categories</a></li>
+    <li><a href="bar_graph.html">Average Likes, Dislikes, Views</a></li>
+    <li><a href="youtubeindex.html">3D Video Box</a></li>
+    <li><a href="geo_map.html">Population Map</a></li>
+  </ul>
+  </nav>  
+
+    <!-- map div -->
+    <div id="map"></div>
+    <div id="icon"></div>
+
+    <i class="fas fa-user"></i>
+    
+    <footer>
+			<div class="footer">
+				Team Abracadata &copy; 2021 | DU Data Analysis and Visualization 
+			</div>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+    <!-- API key -->
+    <script type="text/javascript" src="assets/js/leaflet_map/config.js"></script>
+      <!-- JS  -->
+    <script type="text/javascript" src="assets/js/leaflet_map/logic.js"></script>
+    <script type="text/javascript" src="assets/js/leaflet_map/choropleth.js"></script>
+  
+  <!-- Scripts -->
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
