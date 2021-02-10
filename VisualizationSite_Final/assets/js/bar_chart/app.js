@@ -12,8 +12,6 @@ function makeResponsive() {
   var width = window.innerWidth;
   var height = window.innerHeight;
 
-
-    
   // Setup Chart/SVG Params
   var svgHeight = height;
   var svgWidth = width;
@@ -69,7 +67,7 @@ function renderAxesY(newYScale, yAxis) {
     return yAxis;
   }
 
-// function used for updating circles group with a transition to new circles
+// function used for updating bars group with a transition to new bars
 function renderBars(barGroup, newYScale, chosenYAxis) {
 
     barGroup.transition()
@@ -80,7 +78,7 @@ function renderBars(barGroup, newYScale, chosenYAxis) {
     return barGroup;
   }
 
-// function used for updating circles group with new tooltip
+// function used for updating bars group with new tooltip
 function updateToolTip(chosenYAxis, barGroup) {
 
     var label;
@@ -106,12 +104,12 @@ function updateToolTip(chosenYAxis, barGroup) {
     
     barGroup.call(toolTip);
 
-    // Step 2: Create "mouseover" event listener to display tooltip
+    // Create "mouseover" event listener to display tooltip
     barGroup.on("mouseover", function(data) {
       toolTip.show(data);
     })
 
-    // Step 3: Create "mouseout" event listener to hide tooltip
+    // Create "mouseout" event listener to hide tooltip
     .on("mouseout", function(data, index) {
       toolTip.hide(data);
     });
@@ -123,7 +121,7 @@ function updateToolTip(chosenYAxis, barGroup) {
 d3.csv("data/bar_chart_data/metric_data.csv").then(function(metricData){
     console.log(metricData);
 
-     // Cast the hours value to a number for each piece of tvData
+     // Cast the hours value to a number for each piece of metricData
     metricData.forEach(function(d) {
     d.avg_likes = +d.avg_likes;
     d.avg_dislikes = +d.avg_dislikes;
@@ -211,8 +209,7 @@ d3.csv("data/bar_chart_data/metric_data.csv").then(function(metricData){
         .attr("y", 0 - (chartMargin.top / 2))
         .attr("text-anchor", "middle")  
         .style("font-size", "32px") 
-        .style("font-family", "sans-serif")
-        //.style("text-decoration", "underline")  
+        .style("font-family", "sans-serif")  
         .text("COUNTRY'S AVERAGE (LIKES | DISLIKES | VIEWS)");
 
     //update tool tip function

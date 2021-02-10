@@ -8,7 +8,7 @@ Visualization Project: Global Analysis of Trending YouTube Data
 - Julia Squeri
 - John Shuford
 
-The final version of this project is deployed [here](link)
+The final version of this project is deployed [here](https://johnshuford.github.io/Visualization_Project/).
 
 Project Overview
 ------
@@ -43,6 +43,6 @@ can be found [here](https://www.kaggle.com/datasnaek/youtube-new). The final dat
 For three of our visualizations, we adapted publically available code libraries for use with our own data/styling. 
 - The code used for creating our bubble chart can be found [here](https://vallandingham.me/vis/gates/).
 - The code used for our map can be found [here](https://d3-geomap.github.io/).
+
 - The code used for our 3D Box can be found [here](link).
 - The final project can be found [here](https://johnshuford.github.io/Visualization_Project/index.html).
-
