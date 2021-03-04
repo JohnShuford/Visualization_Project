@@ -8,7 +8,7 @@ Visualization Project: Global Analysis of Trending YouTube Data
 - Julia Squeri
 - John Shuford
 
-The final version of this project is deployed [here](https://johnshuford.github.io/Visualization_Project/).
+The final version of this project is deployed [here](https://www.abracadata.dev/).
 
 Project Overview
 ------
