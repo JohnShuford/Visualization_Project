@@ -343,6 +343,9 @@ function bubbleChartCA() {
     var content = '<span class="name">Channel Title: </span><span class="value">' +
                   d.name +
                   '</span><br/>' +
+                  '<span class="name">Video Title: </span><span class="value">' +
+                  d.org +
+                  '</span><br/>' +
                   '<span class="name">Views: </span><span class="value">' +
                   addCommas(d.value) +
                   '</span><br/>' +
