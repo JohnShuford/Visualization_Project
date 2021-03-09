@@ -392,7 +392,7 @@ textarea {
   outline: 0;
   padding: 0 1rem;
   text-decoration: none;
-  width: 100%; }
+  width: 60%; }
   input[type="text"]:invalid,
   input[type="password"]:invalid,
   input[type="email"]:invalid,
@@ -2876,4 +2876,14 @@ footer {
 
 div .leaflet-top{
   margin-top: 2.6rem;
+}
+
+.box1{
+  margin-top : 4rem;
+  margin-left: 30rem;
+}
+
+#button2 {
+  margin-top: 2rem;
+  margin-left: 10rem;
 }
