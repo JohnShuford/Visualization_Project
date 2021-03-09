@@ -15,6 +15,7 @@ def model():
 #BACKEND
 @app.route("/classifier", methods=["POST"])
 def post_classifier():
+    #if request.method == "POST":
     print(request.form.to_dict(flat=False)) #SENDS to Json
     #print(request.form.get("id"))
     title = request.form.get("title") #Title = input that user will enter on website 
@@ -24,7 +25,7 @@ def post_classifier():
     py_dict = {"category": category} #Turns to dictionary
     print(py_dict)
     return json.dumps(py_dict) #Returns dictionary in JSON
-    
+    #return render_template('model.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
