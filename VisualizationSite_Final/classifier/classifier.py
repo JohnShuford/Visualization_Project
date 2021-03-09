@@ -50,7 +50,7 @@ def classifier(user_input):
 
 # Test 
 if __name__ == "__main__":
-    Predict, CategoryName = classifier("Donald Trump gives White House Speech")
+    Predict, CategoryName = classifier("Cat gives White House Speech")
     print(f" {Predict}, {CategoryName}")
 
     
