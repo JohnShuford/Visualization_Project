@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, request
+from flask import Flask, render_template, redirect, url_for, request, jsonify
 import classifier
 import json
 
@@ -28,6 +28,15 @@ def post_classifier():
     py_dict = {"category": category} #Turns to dictionary
     print(py_dict)
     return json.dumps(py_dict) #Returns dictionary in JSON
+    #return render_template('model.html')
+
+
+@app.route("/api/v1.0/classifier/<title>")
+def doclassify(title = None):
+    id, category = classifier.classifier(title) #Takes the input
+    py_dict = {"category": category} #Turns to dictionary
+    print(py_dict)
+    return jsonify(py_dict) #Returns dictionary in JSON
     #return render_template('model.html')
 
 if __name__ == "__main__":
