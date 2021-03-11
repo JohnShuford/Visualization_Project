@@ -35,7 +35,7 @@
 
 								<!-- Form -->
 									<!--h3>Form</h3 -->
-									<form method="POST" action="http://127.0.0.1:5000/classifier">
+									<form id="form">
 										<div class="box1" id="box2">
 											<div class="col-6 col-12-xsmall">
 												<input type="text" name="title" id="title" value="" placeholder="Enter Video Title" />
@@ -44,7 +44,7 @@
 											<!-- Break -->
 											<div class="col-12">
 												<ul class="actions" id ="button2">
-													<li><input type="submit" value="Submit Form" class="primary" /></li>
+													<li><input type="submit" value="Submit Form" class="primary" id="submit" /></li>
 													<li><input type="reset" value="Reset" /></li>
 												</ul>
 											</div>
@@ -54,11 +54,13 @@
 
 
 		<!-- Scripts -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/model.js"></script>
 
 	</body>
 </html>
