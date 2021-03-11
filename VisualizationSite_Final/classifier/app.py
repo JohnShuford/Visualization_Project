@@ -13,14 +13,17 @@ def model():
     #classifier.classifier()
 
 #BACKEND
-@app.route("/classifier", methods=["POST"])
+@app.route("/classifier", methods=["GET","POST"])
 def post_classifier():
-    #if request.method == "POST":
-    print(request.form.to_dict(flat=False)) #SENDS to Json
+    if request.method == "POST":
+    #print(request.form.to_dict(flat=False)) #SENDS to Json
     #print(request.form.get("id"))
-    title = request.form.get("title") #Title = input that user will enter on website 
-    print(title)
-    #print(json.loads(request.form))
+        title = request.form.get("title") #Title = input that user will enter on website 
+        print(title)
+    else:
+        title = request.args.get("title")
+        print(title)
+        #print(json.loads(request.form))
     id, category = classifier.classifier(title) #Takes the input
     py_dict = {"category": category} #Turns to dictionary
     print(py_dict)
