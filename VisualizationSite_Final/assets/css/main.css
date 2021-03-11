@@ -2885,5 +2885,11 @@ div .leaflet-top{
 
 #button2 {
   margin-top: 2rem;
-  margin-left: 10rem;
+  margin-left: 15rem;
+}
+
+#pid {
+  color: red;
+  margin-left: 12rem;
+  margin-top: 2rem;
 }

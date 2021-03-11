@@ -1,28 +1,24 @@
+
+// const express = require('express');
+// const request = require('request');
+// const app = express();
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   next();
+// });
 var button = d3.select("#submit");
 var url = "http://127.0.0.1:5000/api/v1.0/classifier/"
 var form = d3.select("#form");
-console.log(url);
+// console.log(url);
 
 button.on("click", function() {
-    var title = d3.select("#title");
-    var titleValue = title.property("value");
-
-    console.log(titleValue);
-
-    d3.json(url + titleValue, function(data){
-        d3.select("#pid").text(data.category)
+    const title = d3.select("#title").property("value");
+    
+     // Prevent the page from refreshing
+    d3.event.preventDefault();
+    d3.json(url + title, function(err, data){
+         console.log(err)
          console.log(data);
-         console.log("We are here");
+         d3.select("#pid").text(data.category)
     })
-    
-//     d3.json("https://api.npoint.io/5b22a0474c99d3049d2e", function(data) {
-//     console.log(data)
-// })
-
-    // var category = d3.request(url + titleValue)
-    //     .mimeType("application/json")
-    //     .response(function(xhr) {parsed = JSON.parse(xhr.responseText); 
-    //     console.log(parsed);});
-    
-    console.log(category);
 });
