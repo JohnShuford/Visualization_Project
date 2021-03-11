@@ -2879,7 +2879,7 @@ div .leaflet-top{
 }
 
 .box1{
-  margin-top : 4rem;
+  margin-top : 2rem;
   margin-left: 30rem;
 }
 
@@ -2892,4 +2892,11 @@ div .leaflet-top{
   color: red;
   margin-left: 12rem;
   margin-top: 2rem;
+}
+
+#hid {
+  color: black;
+  margin-top: 2rem;
+  margin-left: 30rem;
+  font-size: 1.5rem;
 }
