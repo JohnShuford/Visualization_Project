@@ -1,0 +1,71 @@
+
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>AbracaDashboard</title>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="./images/RabbitFromHat.png">
+	</head>
+	<body class="is-preload">
+
+   <!-- Header -->
+    <header id="header">
+      <a class="logo" href="index.html">AbracaDashboard</a>
+      <nav>
+        <a href="#menu">Menu</a>
+      </nav>
+    </header>
+
+  <!-- Nav -->
+  <nav id="menu">
+	<ul class="links">
+		<li><a href="about.html">About This Project</a></li>
+		<li><a href="index.html">Dashboard</a></li>
+		<li><a href="bubble_chart.html">Most Viewed Categories</a></li>
+		<li><a href="bar_graph.html">Average Likes, Dislikes, Views</a></li>
+		<li><a href="youtubeindex.html">3D Video Box</a></li>
+		<li><a href="model_get.html">Category Predictor</a></li>
+	  	<li><a href="geo_map.html">Population Map</a></li>
+	</ul>
+	</nav> 
+
+								<!-- Form -->
+									<p id ="hid">Enter a video title here to see the predicted category it would fall into</p>
+									<form id="form">
+										<div class="box1" id="box2">
+											<div class="col-6 col-12-xsmall">
+												<input type="text" name="title" id="title" value="" placeholder="Enter Video Title" />
+												<H2 id="pid"></H2>
+											</div>
+											
+											<!-- Break -->
+											<div class="col-12">
+												<ul class="actions" id ="button2">
+													<li><input type="submit" value="Submit Form" class="primary" id="submit" /></li>
+													<li><input type="reset" value="Reset" /></li>
+												</ul>
+											</div>
+										</div>
+										
+									</form>
+									
+
+
+
+		<!-- Scripts -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/model2.js"></script>
+
+	</body>
+</html>

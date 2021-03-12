@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+
+<html>
+
+	  <head>
+  
+        <title>AbracaDashboard</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="description" content="" />
+		    <meta name="keywords" content="" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="icon" href="./images/RabbitFromHat.png">
+
+    </head>
+
+    <body class="is-preload">
+
+
+
+
+
+    <!-- Header -->
+    <header id="header">
+      <a class="logo" href="index.html">AbracaDashboard</a>
+      <nav>
+        <a href="#menu">Menu</a>
+      </nav>
+    </header>
+
+  <!-- Nav -->
+<nav id="menu">
+  <ul class="links">
+    <li><a href="about.html">About This Project</a></li>
+    <li><a href="index.html">Dashboard</a></li>
+	  <li><a href="bubble_chart.html">Most Viewed Categories</a></li>
+	  <li><a href="bar_graph.html">Average Likes, Dislikes, Views</a></li>
+	  <li><a href="youtubeindex.html">3D Video Box</a></li>
+	  <li><a href="model_get.html">Category Predictor</a></li>
+    <li><a href="geo_map.html">Population Map</a></li>
+  </ul>
+  </nav> 
+
+    <!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+          <h2><b>Trending  YouTube  Video  Analysis</h2></b>
+				</div>
+				<!--video autoplay loop muted playsinline src="images/banner.mp4"></video-->
+			</section>
+
+  <!-- Highlights -->
+  <section class="wrapper">
+    <div class="inner">
+      <header class="special">
+        <!--h1><b>Most</b> Popular . Viewed . Liked . Disliked . Commented  <br><b>YouTube Channels</h1></b-->
+      </header>
+
+
+        <div class="highlights">
+          <section>
+            
+            <div class="content">
+              <header>
+                <a href="#" class="icon fa-globe"><span class="label">Icon</span></a>
+                <h3><b>Select Country:</b></h3>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+
+            <!--Google Translate Section-->
+                <h3><br><br><br><b>Translate this page:</b></h3>
+                    <div id="google_translate_element"></div>
+                        <script type="text/javascript">
+                                function googleTranslateElementInit() {
+                                        new google.translate.TranslateElement({pageLanguage: 'en'}, 
+                                        'google_translate_element');}
+                        </script>
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                  </div>
+            </section>
+
+
+          <section>
+            <div class="content">
+              <header>
+                <a href="#" class="icon fa-eye"><span class="label">Icon</span></a>
+                <h3><b>Most Watched Videos</b></h3>
+              </header>
+              <div id="views"></div>
+            </div>
+          </section>
+
+          
+          <section>
+            <div class="content">
+              <header>
+                <a href="#" class="icon fa-star"><span class="label">Icon</span></a>
+                <h3><b>Most Popular Channels</b></h3>
+              </header>
+              <div id="channel"></div>
+            </div>
+          </section>
+
+          
+          <section>
+            <div class="content">
+              <header>
+                <a href="#" class="icon fa-thumbs-up"><span class="label">Icon</span></a>
+                <h3><b>Most Liked Videos</b></h3>
+              </header>
+              <div id="likes"></div>
+            </div>
+          </section>
+
+
+          <section>
+            <div class="content">
+              <header>
+                <a href="#" class="icon fa-comments"><span class="label">Icon</span></a>
+                <h3><b>Most Commented Videos</b></h3>
+              </header>
+              <div id="comments"></div>
+            </div>
+          </section>
+
+
+          <section>
+            <div class="content">
+              <header>
+                <a href="#" class="icon fa-thumbs-down"><span class="label">Icon</span></a>
+                <h3><b>Most Disliked Videos</b></h3>
+              </header>
+              <div id="dislikes"></div>
+					</div>
+						</section>
+					</div>
+				</div>
+			</section>
+
+
+  <footer>
+    <div class="footer">
+      Team Abracadata &copy; 2021 | DU Data Analysis and Visualization 
+    </div>
+  </footer>
+
+  <!-- Plotly JS Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="assets/js/plotly/app.js"></script>
+  
+  <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+  </body>
+
+</html>
