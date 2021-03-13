@@ -8,7 +8,7 @@ Visualization Project: Global Analysis of Trending YouTube Data
 - Julia Squeri
 - John Shuford
 
-The final version of this project is deployed [here](https://www.abracadata.dev/).
+The final version of this project is deployed using AWS & a custom domain [here](https://www.abracadata.dev/).
 
 Project Overview
 ------
@@ -37,6 +37,11 @@ can be found [here](https://www.kaggle.com/datasnaek/youtube-new). The final dat
 4) Our final dataset included 45,698 records from a total of 10 countries.
 5) Our final website include multiple forms of user driven interaction, such as a **dropdown** menu on the main page dashboard and on our bubble chart to navigate through and view the different data for each country. We incorporated multiple interactive visualizations where the user can select what countries data to view, or which statistics to see. Our website itself also has an interactive **menu**/navigation bar where the user can navigate through the website/different visualizations.
 6) Our final project includes **four unique visualizations, and one dashboard** of different video metrics for each country. Our bubble chart visualization as well as our dashboard of country metrics include 10 different views, one for each country. Our bubble chart visualization also includes two different views for each country, one that includes every video, and one that seperates the videos into categories. Our interactive bar chart allows the user to navigate between three different metrics (average likes, dislikes, and views) and see the data displayed for each country.
+7) Our final project also includes an 'About this project' page with a description of the project, dataset, and team members. This page also includes two word cloud visualizations created using Matplotlib that show some of the most common words used in the video titles in our dataset. The code for these word clouds can be found in the 'CategoryClassifier' folder in the Jupyter Notebook.
+
+### Machine Learning Model
+
+For the final version of this project, we created a Naive Bayes model that allows a user to enter a hypothetical video title and see what category it would fall into. The model was trained on title and category data from the US, Canada, and Great Britain. After we fit, tested, and trained our model, we created a web form that would allow the model to take a title input and return a prediction of video category, such as 'News & Politics', 'Entertainment', etc. The Jupyter Notebook code for this model can be found inside the 'CategoryClassifier' folder. The python scripts, Flask application, and saved models for the back-end of our application can be found in the 'VisualizationSite_Final' folder inside the 'classifier' folder. As of now, the model will only work on our website if the user runs the 'app.py' script on their local machine. As a future direction, we would like to get the model/application working through AWS so any user can run the model without having to start it on their local machine. 
 
 ### Source Codes
 
